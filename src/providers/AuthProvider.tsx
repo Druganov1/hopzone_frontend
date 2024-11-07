@@ -29,7 +29,7 @@ export enum FirebaseError {
   weakPassword = 'auth/weak-password',
   emailInUse = 'auth/email-already-in-use',
   invalidEmail = 'auth/invalid-email',
-  invalidLoginCredentials = 'auth/invalid-login-credentials', // Add this line
+  invalidLoginCredentials = 'auth/invalid-credential', // Add this line
 }
 
 interface IAuthContext {
@@ -106,6 +106,7 @@ export const AuthProvider: FunctionComponent = ({ children }) => {
 
   const createWebSocket = (token: string) => {
     const url = process.env.NEXT_PUBLIC_BACKEND || 'http://localhost:3001'
+    console.log('create websocket', url)
     const newSocket = io(url, {
       auth: {
         token: `Bearer ${token}`,
