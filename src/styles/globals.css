@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: #221a56;
+  font-family: 'Kanit', sans-serif;
+  color: #fff;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.image-container {
+  width: 100%;
+}
+
+.image-container > div {
+    position: unset !important;
+}
+
+.image {
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+}
