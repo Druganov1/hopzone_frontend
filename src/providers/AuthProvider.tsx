@@ -106,12 +106,12 @@ export const AuthProvider: FunctionComponent = ({ children }) => {
 
   const createWebSocket = (token: string) => {
     const url = process.env.NEXT_PUBLIC_BACKEND || 'http://localhost:3001'
-    console.log('create websocket', url)
     const newSocket = io(url, {
       auth: {
         token: `Bearer ${token}`,
       },
     })
+    console.log('create websocket', newSocket)
 
     setSocket(newSocket)
   }
