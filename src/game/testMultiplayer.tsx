@@ -62,6 +62,7 @@ const TestMultiplayer: FunctionComponent<MultiplayerProps> = ({
 
   const preload = (p5: p5Types) => {
     const platformImg = p5.loadImage('/img/platform_static.png')
+    const playerImg = p5.loadImage('/img/character.png')
     const backgroundImage = p5.loadImage('/img/bg_texture.png')
 
     const orangeCharacter = p5.loadImage('/img/character_orange.png')
@@ -88,7 +89,7 @@ const TestMultiplayer: FunctionComponent<MultiplayerProps> = ({
     const fontRegular = p5.loadFont('/font/Kanit-Regular.ttf')
     const fontSemibold = p5.loadFont('/font/Kanit-SemiBold.ttf')
 
-    setImages([platformImg, backgroundImage, cross])
+    setImages([platformImg, playerImg, backgroundImage, cross])
     setCharacterImages([
       orangeCharacter,
       prupleCharacter,
